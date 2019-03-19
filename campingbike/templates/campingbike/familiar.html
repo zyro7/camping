@@ -1,0 +1,12 @@
+{% extends 'campingbike/base.html' %}
+{% block content %}
+<div class="container">
+    {% for ruta in Rutes %}
+        <div class="row">
+            {{ruta.nom}}
+            {{ruta.temps}}
+            {{ruta.opinio}}
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

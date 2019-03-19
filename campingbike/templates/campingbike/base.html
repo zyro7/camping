@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Camping bike Vell Emporda</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+
+
+
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+    <!--Start of navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light position-relative">
+        <a href="{% url 'campingbike:index' %}"><img class="navbar-brand" height="50px" src="{% static 'campingbike/logo.png' %}"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Rutes
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'campingbike:familiar' %}">Familiar</a>
+                        <a class="dropdown-item" href="{% url 'campingbike:parelles' %}">Parelles</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url 'campingbike:endurance' %}">Endurance</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Servei lloguer</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="{% url 'campingbike:experiencies' %}" tabindex="-1" aria-disabled="true">
+                        Experiencies
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://bookings.masterasp.com/?estab=365&lang=ca" tabindex="-1" aria-disabled="true">Reserva</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav my-2 my-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'campingbike:maps' %}" tabindex="-1" aria-disabled="true">Mapa(Rutes)</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+    <!--End of navbar-->
+
+    {% block content %}
+    {% endblock %}
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+<style>
+.container .dropdown-menu {
+    position: static;
+    float: none;
+}
+</style>
+    {% block js%}
+    {% endblock %}
+</body>
+</html>

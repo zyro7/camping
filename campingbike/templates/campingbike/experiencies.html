@@ -1,0 +1,111 @@
+{% extends 'campingbike/base.html' %}
+{% load static %}
+{% block content %}
+   <div class="parallax-window" data-parallax="scroll" data-image-src="https://static.joandjudy.com/media/image/4e/c8/62/JJ_Wallpaper_Maerz_2019KMyNyRsW2UcZr.jpg"></div>
+    <div class="container">
+      <h2 class="header">Rutes</h2>
+      <p class="grey-text text-darken-3 lighten-3">En el camping oferim les rutes més emblematiques de la nostre zona.</p>
+    </div>
+
+  <div class="parallax-window" data-parallax="scroll" data-image-src="https://static.joandjudy.com/media/image/4e/c8/62/JJ_Wallpaper_Maerz_2019KMyNyRsW2UcZr.jpg"></div>
+
+    <div class="container">
+      <h2 class="header">Cycling tour</h2>
+      <p class="grey-text text-darken-3 lighten-3">Colaborem amb cycling tours per fer rutes</p>
+    </div>
+
+  <div class="parallax-window" data-parallax="scroll" data-image-src="https://static.joandjudy.com/media/image/4e/c8/62/JJ_Wallpaper_Maerz_2019KMyNyRsW2UcZr.jpg"></div>
+
+    <div class="container">
+      <h2 class="header">Fiets fun</h2>
+      <p>Fiets fun fa rutes amb tracking</p>
+    </div>
+
+    <div class="parallax-window" data-parallax="scroll" data-image-src="https://static.joandjudy.com/media/image/4e/c8/62/JJ_Wallpaper_Maerz_2019KMyNyRsW2UcZr.jpg"></div>
+
+      <div class="container">
+          <div class="row mt-5">
+                <div class="col-6 col-lg-4">
+
+                    <figure>
+                        <a class="d-block mb-4" data-fancybox="images" href="{% static 'campingbike/bicis-linea.jpg' %}" data-width="1536" data-height="2304">
+                            <img  class="img-fluid" data-src="{% static 'campingbike/bicis-linea.jpg' %}">
+                        </a>
+                    </figure>
+
+                    <figure>
+                        <a class="d-block mb-4" data-fancybox="images" href="{% static 'campingbike/bicis.jpg' %}" data-width="1279" data-height="853">
+                            <img class="img-fluid lazy" data-src="{% static 'campingbike/bicis.jpg' %}">
+                        </a>
+                    </figure>
+
+                </div>
+                <div class="col-6 col-lg-4">
+
+                    <figure>
+                        <a class="d-block mb-4" data-fancybox="images" href="{% static 'campingbike/bicis-sortida.jpg' %}" data-width="1279" data-height="719">
+                            <img class="img-fluid lazy" src="{% static 'campingbike/bicis-sortida.jpg' %}">
+                        </a>
+                    </figure>
+
+                    <figure>
+                        <a class="d-block mb-4" data-fancybox="images" href="{% static 'campingbike/carretera-tenda.jpg' %}" data-width="1279" data-height="853">
+                            <img class="img-fluid lazy" src="{% static 'campingbike/carretera-tenda.jpg' %}">
+                        </a>
+                    </figure>
+
+                    <figure>
+                        <a class="d-block mb-4" data-fancybox="images" href="{% static 'campingbike/cycle.jpg' %}" data-width="1020" data-height="858">
+                            <img class="img-fluid lazy" src="{% static 'campingbike/cycle.jpg' %}">
+                        </a>
+                    </figure>
+
+                </div>
+                <div class="col-6 col-lg-4 d-none d-lg-block">
+
+                    <figure>
+                        <a class="d-block mb-4" data-fancybox="images" href="{% static 'campingbike/spining.jpg' %}" data-width="1279" data-height="870">
+                            <img class="img-fluid lazy" src="{% static 'campingbike/spining.jpg' %}">
+                        </a>
+                    </figure>
+
+                    <figure>
+                        <a class="d-block mb-4" data-fancybox="images" href="{% static 'campingbike/carretera-cadira.jpg' %}" data-width="1519" data-height="2279">
+                            <img class="img-fluid lazy" src="{% static 'campingbike/carretera-cadira.jpg' %}">
+                        </a>
+                    </figure>
+                </div>
+            </div>
+      </div>
+<style>
+
+.parallax-window {
+    min-height: 600px;
+    background: transparent;
+
+}
+</style>
+{% endblock %}
+{% block js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
+<script src="{% static 'campingbike/parallax/parallax.js' %}"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $('.lazy').Lazy({
+        // your configuration goes here
+        scrollDirection: 'vertical',
+        effect: 'fadeIn',
+        visibleOnly: true,
+        onError: function(element) {
+            console.log('error loading ' + element.data('src'));
+        }
+    });
+        $('.parallax-window').parallax();
+    });
+</script>
+{% endblock %}
