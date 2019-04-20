@@ -1,6 +1,13 @@
 {% extends 'campingbike/base.html' %}
+{% load static %}
 {% block content %}
 <div class="container">
+    <div id="mapContainer" ></div>
+    <!-- https://es.wikiloc.com/rutas-ciclismo/colera-coll-de-banyuls-sant-pere-de-rodes-colera-4563885 -->
+    <img class="" src="{% static 'campingbike/Rutaverda.png' %}">
+    <div id="mapContainer2" ></div>
+    <!--  -->
+    <img class="float-right" src="{% static 'campingbike/Rutaverda.png' %}">
     {% for ruta in Rutes %}
         <div class="row">
             {{ruta.nom}}
@@ -9,4 +16,63 @@
         </div>
     {% endfor %}
 </div>
+{% endblock %}
+{% block js %}
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="{% static 'campingbike/Lib/js/dx.all.js' %}"></script>
+    <script>
+        $(function() {
+            $("#mapContainer").dxMap({
+                provider: "bing",
+                center: { lat: 42.33, lng: 3.067 },
+                zoom: 13,
+                height: 600,
+                width: "100%",
+                type: "hybrid",
+                routes: [
+                    {
+                        weight: 3,
+                        color: "blue",
+                        opacity: 0.5,
+                        mode: "",
+                        locations: [
+                            [42.339, 3.067],
+                            [42.389, 2.999],
+                            [42.45, 3.053],
+                            [42.481, 3.128],
+                            [42.334, 3.196],
+                            [42.329, 3.156],
+                            [42.339, 3.067]
+                        ]
+
+                    }
+                ]
+            });
+            $("#mapContainer2").dxMap({
+                provider: "bing",
+                center: { lat: 42.33, lng: 3.067 },
+                zoom: 13,
+                height: 600,
+                width: "100%",
+                type: "hybrid",
+                routes: [
+                    {
+                        weight: 3,
+                        color: "blue",
+                        opacity: 0.5,
+                        mode: "",
+                        locations: [
+                            [42.339, 3.067],
+                            [42.326, 3.150],
+                            [42.334, 3.19],
+                            [42.296, 3.235],
+                            [42.339, 3.067]
+
+                        ]
+
+                    }
+                ]
+            });
+        });
+    </script>
 {% endblock %}

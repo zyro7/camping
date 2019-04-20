@@ -1,4 +1,5 @@
 {% extends 'campingbike/base.html' %}
+{% load static %}
 {% block content %}
 <div class="container">
     <div id="mapContainer" ></div>
@@ -7,14 +8,14 @@
 {% endblock  %}
 {% block js %}
     <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.1.0.min.js"></script>
-    <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/18.2.5/js/dx.all.js"></script>
+    <script type="text/javascript" src="{% static 'campingbike/Lib/js/dx.all.js' %}"></script>
     <script>
         $(function() {
             $("#mapContainer").dxMap({
                 provider: "bing",
                 center: { lat: 42.33, lng: 3.067 },
-                zoom: 10,
-                height: 600,
+                zoom: 11,
+                height: 700,
                 width: "100%",
                 type: "hybrid",
                 routes: [
@@ -28,9 +29,23 @@
                             [42.326, 3.150],
                             [42.334, 3.19],
                             [42.296, 3.235],
+                            [42.339, 3.067]
+                        ]
+
+                    },
+                    {
+                        weight: 2,
+                        color: "green",
+                        opacity: 0.5,
+                        mode: "",
+                        locations: [
                             [42.339, 3.067],
-                            //[42.334, 3.19],
-                            //[42.334, 3.19]
+                            [42.389, 2.999],
+                            [42.45, 3.053],
+                            [42.481, 3.128],
+                            [42.334, 3.196],
+                            [42.329, 3.156],
+                            [42.339, 3.067]
                         ]
 
                     }
