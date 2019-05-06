@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from .models import Ruta
-
+import folium
 # Create your views here.
 def index(request):
-    return render(request,'campingbike/index.html')
+    m = folium.Map(location=[45.5236, -122.6750])
+    return render(request,'campingbike/proba.html',{'m':m})
 
 def familiar(request):
     rutes = Ruta.objects.filter(tipus='F')
