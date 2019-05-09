@@ -3,6 +3,7 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <script>L_PREFER_CANVAS=false; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
@@ -31,14 +32,14 @@
     <div class="folium-map" id="map_1c852c487c4249f1a835f2579b7aaeab" ></div>
 </body>
 <script>    
-    
+
     
         var bounds = null;
     
 
-    var map_1c852c487c4249f1a835f2579b7aaeab = L.map(
+    var map = L.map(
         'map_1c852c487c4249f1a835f2579b7aaeab', {
-        center: [40.965, -5.664],
+        center: [42.352088, 3.067773],
         zoom: 10,
         maxBounds: bounds,
         layers: [],
@@ -61,5 +62,26 @@
         "opacity": 1, 
         "subdomains": "abc", 
         "tms": false
-}).addTo(map_1c852c487c4249f1a835f2579b7aaeab);
+}).addTo(map);
+
+var router = L.routing.osrmv1()
+
+router.route([
+  L.routing.waypoint([42.352088, 3.067773]),
+  L.routing.waypoint([42.364739, 3.078741])
+], function(err, routes) {
+  if (err || routes.length < 1) {
+    return console.error('a')
+  }
+
+var line = L.routing.line(routes[0]).addTo(map)
+  map.fitBounds(line.getBounds())
+})
+
+    /*L.Routing.control({
+  waypoints: [
+    L.latLng(40.965, -5.664),
+    L.latLng(40.966, -5.665)
+  ]
+}).addTo(map_1c852c487c4249f1a835f2579b7aaeab);*/
 </script>
