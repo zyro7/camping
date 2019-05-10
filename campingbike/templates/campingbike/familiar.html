@@ -1,19 +1,22 @@
 {% extends 'campingbike/base.html' %}
 {% load i18n %}
+{% load static %}
 {% block content %}
 <div class="container">
-    
+
     {% get_current_language as LANGUAGE_CODE %}
     {{ LANGUAGE_CODE }}
 
 
 
     {% for ruta in Rutes %}
-        <div class="row">
-            {{ruta.nom}}
-            {{ruta.temps}}
-            {{ruta.opinio}}
+        <div class="row comentaris">
+
         </div>
     {% endfor %}
 </div>
+{% endblock %}
+{% block js %}
+<script src="{% static 'campingbike/js/familiar.js' %}"></script>
+
 {% endblock %}

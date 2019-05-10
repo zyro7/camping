@@ -90,3 +90,4 @@ router.route([
 var line = L.routing.line(routes[0]).addTo(map2)
   map2.fitBounds(line.getBounds())
 })
+

@@ -5,16 +5,12 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/imagehover.css/1.0/css/imagehover.min.css">
 <link rel="stylesheet" href="{% static 'InContent-master/css/sass-compiled.css'%}">
-<style>
-  body{
-    background-color: white;
-  }
-</style>
+<link rel="stylesheet" href="{% static 'campingbike/css/index.css' %}">
+
 {% endblock %}
 
 {% block content %}
 <div class="container p-3">
-
   <div class="bxslider">
     <div><img src="{% static 'campingbike/cycle.jpg' %}" title="Funky roots"></div>
     <div><img src="{% static 'campingbike/bicis.jpg' %}" title="The long and winding road"></div>
@@ -23,7 +19,6 @@
   <p class="h2 text-center">Rutes</p>
 
   <div class="row justify-content-around">
-
     <a href="{% url 'campingbike:familiar' %}">
       <div class="pic">
         <img src="{% static 'campingbike/thumbnail.jpg' %}" class="pic-image" alt="Pic"/>
@@ -37,25 +32,12 @@
     <a href="{% url 'campingbike:parelles' %}"><img src="{% static 'campingbike/thumbnail.jpg' %}" class="  " ></a>
     <a href="{% url 'campingbike:endurance' %}"><img src="{% static 'campingbike/thumbnail.jpg' %}" class="  "></a>
   </div>
-
-
 </div>
-
-
 {% endblock %}
 {% block js %}
 <script src="{% static 'InContent-master/libs/modernizr.js' %}"></script>
 <script src="{% static 'node_modules/bxslider/dist/jquery.bxslider.min.js' %}"></script>
-<script>
-    $(document).ready(function(){
-      $(function(){
-          $('.bxslider').bxSlider({
-            mode: 'fade',
-            captions: true
-          });
-        });
-    });
-</script>
+<script src="{% static 'campingbike/js/index.js' %}"></script>
 
 
 {% endblock %}
