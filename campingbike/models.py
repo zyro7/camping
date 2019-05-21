@@ -5,10 +5,17 @@ from django.db import models
 
 # Create your models here.
 
-
-
+class Ruta(models.Model):
+    nom = models.CharField(max_length=20)
 
 class Comentari(models.Model):
+    TIPUS = (
+        ('F', 'Familiar'),
+        ('P', 'Parelles'),
+        ('E', 'Endurance'),
+    )
+    comentari = models.ForeignKey(Ruta, on_delete=models.CASCADE)
+    tipus = models.CharField(max_length=1,choices=TIPUS,null=True,blank=True)
     temps = models.CharField(max_length=10)
     km = models.IntegerField()
     link = models.CharField(max_length=200)
@@ -16,14 +23,4 @@ class Comentari(models.Model):
     opinio = models.CharField(max_length=300)
 
     def __str__(self):
-        return self.nom
-
-
-class Track(models.Model):
-    latitud = models.FloatField(null=True, blank=True, default=None)
-    longitud = models.FloatField(null=True, blank=True, default=None)
-
-class Ruta(models.Model):
-    nom = models.CharField(max_length=30)
-    comentari = models.ManyToManyField(Comentari, null=False)
-    track = models.ManyToManyField(Track , null=True)
+        return self.tipus

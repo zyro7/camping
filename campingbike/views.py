@@ -18,7 +18,7 @@ def endurance(request):
     return render(request,'campingbike/endurance.html',{'Rutes':rutes})
 
 def get_endurance(request):
-    rutes = Comentari.objects.filter(tipus='E')
+    rutes = Comentari.objects.filter(tipus='E').values('tipus', 'temps', 'km', 'link', 'imatge', 'opinio')
     rutes_list = list(rutes)
     return JsonResponse(rutes_list, safe= False)
 
@@ -37,7 +37,7 @@ def xml(request):
     return HttpResponse(data, content_type="application/xml")
 
 def json(request):
-    data = Comentari.objects.all().values('nom', 'tipus', 'temps', 'km', 'link', 'imatge', 'opinio')
+    data = Comentari.objects.all().values('tipus', 'temps', 'km', 'link', 'imatge', 'opinio')
     rutes_list = list(data)
     return JsonResponse(rutes_list, safe= False)
 

@@ -24,25 +24,25 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Rutes
+                        {% trans "Rutes" %}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{% url 'campingbike:familiar' %}">Familiar</a>
-                        <a class="dropdown-item" href="{% url 'campingbike:parelles' %}">Parelles</a>
+                        <a class="dropdown-item" href="{% url 'campingbike:familiar' %}">{% trans "Familiar" %}</a>
+                        <a class="dropdown-item" href="{% url 'campingbike:parelles' %}">{% trans "Parelles" %}</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="{% url 'campingbike:endurance' %}">Endurance</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Servei lloguer</a>
+                    <a class="nav-link" href="#">{% trans "Servei lloguer" %}</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link" href="{% url 'campingbike:experiencies' %}" tabindex="-1" aria-disabled="true">
-                        Experiencies
+                        {% trans "Experiencies" %}
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://bookings.masterasp.com/?estab=365&lang=ca" tabindex="-1" aria-disabled="true">Reserva</a>
+                    <a class="nav-link" href="https://bookings.masterasp.com/?estab=365&lang=ca" tabindex="-1" aria-disabled="true">{% trans "Reserva" %}</a>
                 </li>
             </ul>
             <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
@@ -61,7 +61,7 @@
             </form>
             <ul class="navbar-nav my-2 my-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link " href="{% url 'campingbike:maps' %}" tabindex="-1" aria-disabled="true">Mapa(Rutes)</a>
+                    <a class="nav-link " href="{% url 'campingbike:maps' %}" tabindex="-1" aria-disabled="true">{% trans "Mapa(Rutes)" %}</a>
                 </li>
             </ul>
         </div>
@@ -71,12 +71,13 @@
 
     {% block content %}
     {% endblock %}
-
-
-
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+
 <style>
 .container .dropdown-menu {
     position: static;

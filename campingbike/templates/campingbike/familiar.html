@@ -7,8 +7,6 @@
     {% get_current_language as LANGUAGE_CODE %}
     {{ LANGUAGE_CODE }}
 
-
-
     {% for ruta in Rutes %}
         <div class="row comentaris">
 
@@ -17,6 +15,8 @@
 </div>
 {% endblock %}
 {% block js %}
+
+
 <script src="{% static 'campingbike/js/familiar.js' %}"></script>
 
 {% endblock %}

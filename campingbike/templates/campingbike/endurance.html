@@ -21,15 +21,14 @@
 {% block content %}
     <h2>Coll de banyuls</h2>
     <div class="folium-map" id="map_6be92f8b4bd54b78905cd14785fa6164" ></div>
-    <div id="mapContainer" ></div>
-    <img id="altimetria"class="float-right" src="{% static 'campingbike/Rutaverda.png' %}">
-    <h2 id="h">St. Pere de Rodes</h2>
+    <div id="mapContainer" class="d-block"></div>
+    <img id="altimetria"class="float-right d-block pt-3" src="{% static 'campingbike/Rutaverda.png' %}">
+    <h2 id="h" class="pt-5">St. Pere de Rodes</h2>
     <div id="mapContainer2" ></div>
-    <img id="altimetria2"class="float-right" src="{% static 'campingbike/Rutaverda.png' %}"><br>
-    <div class="comentaris">
+    <img id="altimetria2"class="float-right d-block pt-3" src="{% static 'campingbike/Rutaverda.png' %}"><br>
+    <div class="comentaris d-block pt-5">
     {% for ruta in Rutes %}
 
-        {{ruta.nom}}<br>
         {{ruta.km}} km. {{ruta.temps}}<br>
         {{ruta.opinio}}<br>
         <a href="{{ruta.link}}">Link a la ruta</a>

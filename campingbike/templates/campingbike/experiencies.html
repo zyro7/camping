@@ -1,24 +1,25 @@
 {% extends 'campingbike/base.html' %}
+{% load i18n %}
 {% load static %}
 {% block content %}
    <div class="parallax-window" data-parallax="scroll" data-image-src="{% static 'campingbike/bicis-sortida.jpg' %}"></div>
     <div class="container m-5">
-      <h2 class="header">Rutes</h2>
-      <p class="grey-text text-darken-3 lighten-3">En el camping oferim les rutes més emblematiques de la nostre zona.</p>
+      <h2 class="header">{% trans "Rutes" %}</h2>
+      <p class="grey-text text-darken-3 lighten-3">{% trans "En el camping oferim les rutes més emblematiques de la nostre zona." %}</p>
     </div>
 
   <div class="parallax-window" data-parallax="scroll" data-image-src="{% static 'campingbike/glamping.jpg' %}"></div>
 
     <div class="container m-5 ">
       <h2 class="header">Cycling tour</h2>
-      <p class="grey-text text-darken-3 lighten-3">Colaborem amb cycling tours per fer rutes</p>
+      <p class="grey-text text-darken-3 lighten-3">{% trans "Colaborem amb cycling tours per fer rutes" %}</p>
     </div>
 
   <div class="parallax-window" data-parallax="scroll" data-image-src="https://static.joandjudy.com/media/image/4e/c8/62/JJ_Wallpaper_Maerz_2019KMyNyRsW2UcZr.jpg"></div>
 
     <div class="container m-5">
       <h2 class="header">Fiets fun</h2>
-      <p>Fiets fun fa rutes amb tracking</p>
+      <p>{% trans "Fiets fun fa rutes amb tracking" %}</p>
     </div>
 
     <div class="parallax-window" data-parallax="scroll" data-image-src="{% static 'campingbike/fiets.jpg' %}"></div>

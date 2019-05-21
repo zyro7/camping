@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-09 11:37+0200\n"
-"PO-Revision-Date: 2019-05-09 11:13+0000\n"
+"POT-Creation-Date: 2019-05-21 16:08+0200\n"
+"PO-Revision-Date: 2019-05-21 13:57+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -18,21 +18,82 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Translated-Using: django-rosetta 0.9.3\n"
 
-#: campingbike/templates/campingbike/familiar.html:5
-msgid "Abrir"
-msgstr "Open"
+#: campingbike/templates/campingbike/base.html:27
+#: campingbike/templates/campingbike/experiencies.html:7
+msgid "Rutes"
+msgstr "Routes"
 
-#: campingbike/templates/campingbike/familiar.html:6
-msgid "key"
-msgstr "llave"
+#: campingbike/templates/campingbike/base.html:30
+#: campingbike/templates/campingbike/index.html:26
+msgid "Familiar"
+msgstr "Family"
 
-#: campingf/settings.py:113
+#: campingbike/templates/campingbike/base.html:31
+#: campingbike/templates/campingbike/index.html:35
+msgid "Parelles"
+msgstr "Couples"
+
+#: campingbike/templates/campingbike/base.html:37
+msgid "Servei lloguer"
+msgstr "Rent service"
+
+#: campingbike/templates/campingbike/base.html:41
+msgid "Experiencies"
+msgstr "Experiences"
+
+#: campingbike/templates/campingbike/base.html:45
+msgid "Reserva"
+msgstr "Reservations"
+
+#: campingbike/templates/campingbike/base.html:64
+msgid "Mapa(Rutes)"
+msgstr "Map(Routes)"
+
+#: campingbike/templates/campingbike/experiencies.html:8
+msgid "En el camping oferim les rutes més emblematiques de la nostre zona."
+msgstr "In the campsite we offer the more emblematic routes of the zone."
+
+#: campingbike/templates/campingbike/experiencies.html:15
+msgid "Colaborem amb cycling tours per fer rutes"
+msgstr "We collaborate with cycling tours making routes."
+
+#: campingbike/templates/campingbike/experiencies.html:22
+msgid "Fiets fun fa rutes amb tracking"
+msgstr "Fiets fun does routes with track."
+
+#: campingbike/templates/campingbike/index.html:27
+msgid "Pensades perque hi vagin nens"
+msgstr "Think of it because there are children"
+
+#: campingbike/templates/campingbike/index.html:44
+msgid "Les rutes més exigents"
+msgstr "The most demanding routes"
+
+#: campingf/settings.py:123
+msgid "Catalan"
+msgstr ""
+
+#: campingf/settings.py:124
 msgid "English"
 msgstr "English"
 
-#: campingf/settings.py:114
+#: campingf/settings.py:125
 msgid "Spanish"
 msgstr "Spanish"
+
+#: campingf/settings.py:126
+msgid "French"
+msgstr ""
+
+#: campingf/settings.py:127
+msgid "Dutch"
+msgstr ""
+
+#~ msgid "Abrir"
+#~ msgstr "Open"
+
+#~ msgid "key"
+#~ msgstr "llave"
 
 #~ msgid "Cerrar sessión"
 #~ msgstr "Cerrar sessión"
