@@ -22,17 +22,29 @@
     <h2>Coll de banyuls</h2>
     <div class="folium-map" id="map_6be92f8b4bd54b78905cd14785fa6164" ></div>
     <div id="mapContainer" class="d-block"></div>
-    <img id="altimetria"class="float-right d-block pt-3" src="{% static 'campingbike/Rutaverda.png' %}">
-    <h2 id="h" class="pt-5">St. Pere de Rodes</h2>
-    <div id="mapContainer2" ></div>
-    <img id="altimetria2"class="float-right d-block pt-3" src="{% static 'campingbike/Rutaverda.png' %}"><br>
-    <div class="comentaris d-block pt-5">
-    {% for ruta in Rutes %}
+    <div class="row justify-content-end  pt-3">
+        <img id="altimetria"class=" " src="{% static 'campingbike/Rutaverda.png' %}"><br>
+    </div>
 
-        {{ruta.km}} km. {{ruta.temps}}<br>
-        {{ruta.opinio}}<br>
-        <a href="{{ruta.link}}">Link a la ruta</a>
-    {% endfor %}
+    <h2 id="h" class="">St. Pere de Rodes</h2>
+    <div id="mapContainer2" ></div>
+    <div class="row justify-content-end  pt-3">
+        <img id="altimetria2"class=" " src="{% static 'campingbike/Rutaverda.png' %}"><br>
+    </div>
+    <div class="comentaris d-block pt-5">
+    <h3 class="pb-3">Opinions</h3>
+
+        {% for ruta in Rutes %}
+        <div class="row p-2">
+            <img src="{{ruta.imatge}}" class="col-lg-5 col-md-6" width="100%"height="100%">
+            <div class="col-md-6 col-lg-7 p-3">
+                <p>Ruta: {{ruta.comentari}}</p>
+                <p>Distancia: {{ruta.km}} km. Temps: {{ruta.temps}}</p>
+                <p>{{ruta.opinio}}</p>
+                <a  href="{{ruta.link}}">Link a la ruta</a>
+            </div>
+        </div>
+        {% endfor %}
     </div>
 
 <script src="{% static 'campingbike/js/endurance.js' %}"></script>

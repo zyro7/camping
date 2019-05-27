@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'autotranslate',
     'rosetta',
     'import_export',
+    "django_cron",
 ]
 
 MIDDLEWARE = [
@@ -52,6 +53,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+CRON_CLASSES = [
+    "campingbike.backup.py",
 ]
 
 ROOT_URLCONF = 'campingf.urls'
@@ -148,3 +153,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 IMPORT_EXPORT_USE_TRANSACTIONS = True
+
+TEST = True

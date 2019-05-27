@@ -7,6 +7,8 @@ from django.db import models
 
 class Ruta(models.Model):
     nom = models.CharField(max_length=20)
+    def __str__(self):
+        return self.nom
 
 class Comentari(models.Model):
     TIPUS = (

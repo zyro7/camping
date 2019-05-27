@@ -1,22 +1,31 @@
 {% extends 'campingbike/base.html' %}
-{% load i18n %}
 {% load static %}
-{% block content %}
-<div class="container">
+{% block head %}
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS=false; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.4.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
 
-    {% get_current_language as LANGUAGE_CODE %}
-    {{ LANGUAGE_CODE }}
 
-    {% for ruta in Rutes %}
-        <div class="row comentaris">
-
-        </div>
-    {% endfor %}
-</div>
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="{% static 'campingbike/css/endurance.css' %}">
 {% endblock %}
-{% block js %}
+{% block content %}
+    <h2>Sant quirze de colera</h2>
+    <div class="folium-map" id="map_6be92f8b4bd54b78905cd14785fa6164" ></div>
+    <div id="mapContainer" class="d-block"></div>
+    <h3 class="pt-5 pl-2">Opinions</h3>
+    <div class="comentaris d-block pt-1">
 
+    </div>
 
 <script src="{% static 'campingbike/js/familiar.js' %}"></script>
-
 {% endblock %}

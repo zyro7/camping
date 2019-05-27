@@ -28,6 +28,11 @@ def maps(request):
 def experiencies(request):
     return render(request,'campingbike/experiencies.html')
 
+def lloguer(request):
+    return render(request,'campingbike/lloguer.html')
+
+# Vistes per M04
+
 from django.http import JsonResponse,HttpResponse
 from django.core import serializers
 
