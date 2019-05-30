@@ -1,4 +1,4 @@
-$(document).ready(function(){
+//$(document).ready(function(){
         $('.lazy').Lazy({
         // your configuration goes here
         scrollDirection: 'vertical',
@@ -9,4 +9,4 @@ $(document).ready(function(){
         }
     });
         $('.parallax-window').parallax();
-    });
+    //});

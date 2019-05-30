@@ -1,6 +1,9 @@
 {% extends 'campingbike/base.html' %}
 {% load i18n %}
 {% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'campingbike/css/experiencies.css' %}">
+{% endblock %}
 {% block content %}
    <div class="parallax-window" data-parallax="scroll" data-image-src="{% static 'campingbike/bicis-sortida.jpg' %}"></div>
     <div class="container m-5">
@@ -86,6 +89,6 @@
 <script src="{% static 'campingbike/parallax/parallax.js' %}"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
-
+<script src="{% static 'campingbike/js/experiencies.js' %}"></script>
 
 {% endblock %}
