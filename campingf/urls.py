@@ -19,7 +19,7 @@ from django.conf import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url('campingbike/', include('campingbike.urls')),
+    url('', include('campingbike.urls')),
     url(r'^i18n/', include('django.conf.urls.i18n'))
 ]
 if 'rosetta' in settings.INSTALLED_APPS:

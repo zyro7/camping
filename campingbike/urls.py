@@ -12,6 +12,7 @@ urlpatterns = [
     url(r'^maps$', views.maps, name='maps'),
     url(r'^experiencies', views.experiencies, name='experiencies'),
     url(r'^lloguer', views.lloguer, name='lloguer'),
+    url(r'^politica', views.politica, name='politica'),
     # Urls per M04
     url(r'^descarrega', views.descarrega, name='descarrega'),
     url(r'^xml', views.xml,name="xml"),

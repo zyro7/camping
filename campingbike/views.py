@@ -31,6 +31,9 @@ def experiencies(request):
 def lloguer(request):
     return render(request,'campingbike/lloguer.html')
 
+def politica(request):
+    return render(request,'campingbike/politica.html')
+
 # Vistes per M04
 
 from django.http import JsonResponse,HttpResponse

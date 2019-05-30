@@ -1,18 +1,18 @@
 //Ajax que mostra els comentaris
 $.ajax({
     method: 'GET',
-    url: 'http://127.0.0.1:8000/campingbike/json',
+    url: 'http://127.0.0.1:8000/json',
     success: function(data) {
         $.each(data, function (i, field) {
             if(field['tipus']=='F'){
 
-                $('.comentaris').append('<div class="row p-2">');
-                $("div:last").append("<img class='col-lg-5 col-md-6' width='100%' height='100%' src='" + field['imatge'] +" '>");
-                $("div:last").append("<div class='col-md-6 col-lg-7 p-3'>");
-                $("div:last").append("<p> Ruta:"  + field['comentari'] +  " </p>");
-                $("div:last").append("<p> Distancia:"  + field['km'] +" km. Temps: "+ field['temps']+  " </p>");
-                $("div:last").append("<p>"  + field['opinio'] +  " </p>");
-                $("div:last").append("<a href="+ field['link']  +  "> Link a la ruta </a>");
+                $('.comentaris').append('<div class="row p-2 coment">');
+                $("div.coment:last").append("<img class='col-lg-5 col-md-6' width='100%' height='100%' src='" + field['imatge'] +" '>");
+                $("div.coment:last").append("<div class='col-md-6 col-lg-7 p-3 coment'>");
+                $("div.coment:last").append("<p> Ruta:"  + field['comentari'] +  " </p>");
+                $("div.coment:last").append("<p> Distancia:"  + field['km'] +" km. Temps: "+ field['temps']+  " </p>");
+                $("div.coment:last").append("<p>"  + field['opinio'] +  " </p>");
+                $("div.coment:last").append("<a href="+ field['link']  +  "> Link a la ruta </a>");
             }
         });
     }

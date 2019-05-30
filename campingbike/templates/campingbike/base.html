@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <title>Camping bike Vell Emporda</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
-    <link rel="stylesheet" href="{% static 'campingbike/css/base.css' %}">
-
+    <!--<link rel="stylesheet" src="{% static 'campingbike/cookies/purecookie.css' %}"/>-->
+    <link src="{% static 'campingbike/css/base.css' %}"/>
 
     {% block head %}
     {% endblock %}
@@ -71,9 +71,44 @@
 
     {% block content %}
     {% endblock %}
+    
+    <!-- Footer -->
+    <div class="container-fluid bg-primary py-1">
+    <div class="container">
+      <div class="row py-4">
+        <div class="col-md-9">
+            <a href="http://www.vellemporda.com"><p class="text-white mt-3 display-5">Camping Vell Emporda</p></a>
+            <a href="{% url 'campingbike:politica' %}"><p class="text-white mt-3 display-5">Politica de privacitat</p></a>
+        </div>
+        <div class="col-md-3">
+          <div class="d-inline-block">
+            <div class="bg-circle-outline d-inline-block">
+              <a href="https://www.facebook.com/" class="text-white"><i class="fab fa-facebook"></i>
+		</a>
+            </div>
+
+            <div class="bg-circle-outline d-inline-block">
+              <a href="https://www.instagram.com/campingbikevellemporda/" class="text-white">
+                <i class="fab fa-instagram"></i></a>
+            </div>
+
+            <div class="bg-circle-outline d-inline-block">
+              <a href="mailto:vellemporda@vellemporda.com" target="_top">
+                <i class="text-white fas fa-envelope-square"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!--End of footer -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+    <!--<script src="{% static 'campingbike/cookies/purecookie.js' %}"></script>-->
+    <script src="{% static 'campingbike/js/base.js' %}"></script>
 
     {% block js%}
     {% endblock %}
